@@ -19,13 +19,7 @@ RUN wget -O - https://repo.saltstack.com/apt/debian/8/armhf/latest/SALTSTACK-GPG
     apt-get clean && \
     rm -rf /var/lib/apt/lists/
 
-VOLUME ["/etc/salt/pki", \
-        "/etc/salt/master.d", \
-        "/etc/salt/cloud.maps.d", \
-        "/etc/salt/cloud.conf.d", \
-        "/etc/salt/cloud.profiles.d", \
-        "/etc/salt/cloud.providers.d", \
-        "/etc/salt/minion.d", \
+VOLUME ["/etc/salt", \
         "/var/cache/salt", \
         "/var/logs/salt", \
         "/srv/salt"]
